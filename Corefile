@@ -1,0 +1,13 @@
+https://.:8053 {
+    cache
+    log
+    errors
+    hosts hosts.core examples.org {
+        fallthrough
+    }
+    forward . tls://1.1.1.1 tls://1.0.0.1 {
+        tls_servername cloudflare-dns.com
+        health_check 30s
+    }
+    whoami
+}

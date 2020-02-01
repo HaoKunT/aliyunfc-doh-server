@@ -1,0 +1,11 @@
+:9000 {
+    gzip
+    rewrite {
+        r (.*?)resolver(.*)
+        to {2}
+    }
+    proxy / http://localhost:8053 {
+        transparent
+    }
+    log stdout
+}
