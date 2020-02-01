@@ -1,0 +1,2 @@
+caddy filter=lfs diff=lfs merge=lfs -text
+coredns filter=lfs diff=lfs merge=lfs -text
