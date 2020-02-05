@@ -2,11 +2,11 @@ https://.:8053 {
     cache
     log
     errors
-    hosts hosts.core examples.org {
+    hosts hosts.core gwmodel.whu.edu.cn {
         fallthrough
     }
-    forward . tls://1.1.1.1 tls://1.0.0.1 {
-        tls_servername cloudflare-dns.com
+    forward . tls://8.8.8.8 tls://8.8.4.4 {
+        tls_servername dns.google
         health_check 30s
     }
     whoami
